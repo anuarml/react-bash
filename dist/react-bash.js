@@ -541,7 +541,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	        _classCallCheck(this, Bash);
 
-	        this.commands = Object.assign(extensions, BaseCommands);
+	        this.commands = Object.assign({}, BaseCommands, extensions);
 	        this.prevCommands = [];
 	        this.prevCommandsIndex = 0;
 	    }
@@ -786,7 +786,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	                updatedState.history = history.slice();
 	            }
 	            if (extensions) {
-	                this.Bash.commands = Object.assign({}, extensions, BaseCommands);
+	                this.Bash.commands = Object.assign({}, BaseCommands, extensions);
 	            }
 	            this.setState(updatedState);
 	        }

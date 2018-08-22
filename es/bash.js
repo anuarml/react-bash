@@ -30,7 +30,7 @@ var Bash = function () {
 
         _classCallCheck(this, Bash);
 
-        this.commands = Object.assign(extensions, BaseCommands);
+        this.commands = Object.assign({}, BaseCommands, extensions);
         this.prevCommands = [];
         this.prevCommandsIndex = 0;
     }

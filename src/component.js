@@ -41,7 +41,7 @@ export default class Terminal extends Component {
             updatedState.history = history.slice();
         }
         if (extensions) {
-            this.Bash.commands = Object.assign({}, extensions, BaseCommands);
+            this.Bash.commands = Object.assign({}, BaseCommands, extensions);
         }
         this.setState(updatedState);
     }
